@@ -1,8 +1,8 @@
-body {background-color: #313c4c;
-color: #51dbff;
-}
-a:link {color: #0aa5da;}
+html { background-color: #848484;}
+body {margin-left: 20%; margin-right: 20%; background-color: #313c4c; color: #51dbff;}
 
+a:link {color: #0aa5da;}
 a:visited {color: #0aa5da;}
-body {margin-left: 30%; margin-right: 30%;}
+
+
 
