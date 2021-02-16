@@ -4,10 +4,14 @@
     </head>
     <body>
         <h1 align=center>T3A07-code-Jack</h1>
-        <input type=button value="move 10 pixels right" onclick="{alert(document.getElementById('mySpan01').style.left = '110px'}">
+        <input type=button value="move 10 pixels right" onclick="{
+            alert(parseInt(document.getElementById('mySpan01').style.left))
+            document.getElementById('mySpan01').style.left =
+            parseInt(document.getElementById('mySpan01').style.left) + 10
+            }">
         
         
         
-        <span id="mySpan01" style"position:absolute; left:100; top:150:;">span 1</span>
+        <span id="mySpan01" style"position:absolute; left:100; top:150:;">span 1</span><br>
     </body>
 </html> 
