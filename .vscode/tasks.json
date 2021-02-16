@@ -5,11 +5,14 @@
             "label": "firefox",
             "type": "shell",
             "command": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-            "args":
-            [
+            "args": [
                 "${file}"
-            ]
-        },
-
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
     ]
 }
