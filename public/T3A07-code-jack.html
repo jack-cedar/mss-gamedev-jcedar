@@ -4,27 +4,26 @@
         <script>
             window.addEventListener("keydown", keyPressed, false);
             function keyPressed(event){
-                //i know i could have used a switch statement but i didnt feel like it//
-                if (myHitOther('mySpan01','mySpan02')){
-                document.getElementById('mySpan02').style.left = '-400px'
-                }
-                else if(event.keyCode == 37){
+                //i know i could have used a switch statement but i didnt
+                if(event.keyCode == 37){
                     document.getElementById('mySpan01').style.left =
-                    parseInt(document.getElementById('mySpan01').style.left) - 10   
+                    parseInt(document.getElementById('mySpan01').style.left) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}   
                 }
                 else if(event.keyCode == 38){
                     document.getElementById('mySpan01').style.top =
-                    parseInt(document.getElementById('mySpan01').style.top) - 10   
+                    parseInt(document.getElementById('mySpan01').style.top) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}
                 }
                 else if(event.keyCode == 39){
                     document.getElementById('mySpan01').style.left =
-                    parseInt(document.getElementById('mySpan01').style.left) + 10   
+                    parseInt(document.getElementById('mySpan01').style.left) + 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}
                 }
                 else if(event.keyCode == 40){
                     document.getElementById('mySpan01').style.top =
-                    parseInt(document.getElementById('mySpan01').style.top) + 10   
+                    parseInt(document.getElementById('mySpan01').style.top) + 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}   
                 }
             }
+            
+            
             function myHitOther(my1,my2){
                left1   = parseInt(document.getElementById(my1).style.left)
                right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -42,24 +41,43 @@
                }
             }
         </script>
+        <style>
+            .arrow{
+                border-left: 5px solid black;
+                border-bottom: 5px solid black;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                transform: rotate(135deg);
+            }
+            .up{
+                transform: rotate(135deg);
+            }
+            .down{
+                transform: rotate(-45deg);
+            }
+            .left{
+                transform: rotate(45deg);
+            }
+            .right{
+                transform: rotate(225deg);
+            }
+            .arrow:hover {
+                border-left: 7px solid #0aa5da;
+                border-bottom: 7px solid #0aa5da;
+            }
+        </style>
     </head>
     <body>
         <h1 align=center>T3A07-code-Jack</h1>
-        <input type=button value="move 10 pixels right" onclick="{
-            (parseInt(document.getElementById('mySpan01').style.left))
-            
-            document.getElementById('mySpan01').style.left =
-            parseInt(document.getElementById('mySpan01').style.left) + 10
-            
-            if(myHitOther('mySpan01','mySpan02'))
-            {
-                document.getElementById('mySpan02').style.left = '-400px'
-            }
-            }">
-           
+        you can use the arrow keys on your keyboard too<br><br>
+           <table border=0 width=50px height=50px>
+            <tr><td></td><td><span class="arrow up" onclick="document.getElementById('mySpan01').style.top=parseInt(document.getElementById('mySpan01').style.top) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></b></td><td></td></tr>
+            <tr><td><span class="arrow left" onclick=" document.getElementById('mySpan01').style.left=parseInt(document.getElementById('mySpan01').style.left) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></td>
+            <td></td><td><span class="arrow right" onclick="document.getElementById('mySpan01').style.left=parseInt(document.getElementById('mySpan01').style.left) + 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></td></tr>
+            <tr><td></td><td><span class="arrow down" onclick="document.getElementById('mySpan01').style.top=parseInt(document.getElementById('mySpan01').style.top) + 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></td><td></td></tr>
+          </table><br>
         
-        
-            you can use the arrow keys on your keyboard too<br>
         <span id="mySpan01" style="position:absolute; left:150; top:150; width:50; height:30;">span 1</span><br>
         <span id="mySpan02" style="position:absolute; left:250; top:150; width:50; height:30;"> span 2</span><br>
     </body>
