@@ -4,7 +4,7 @@
         <script>
             window.addEventListener("keydown", keyPressed, false);
             function keyPressed(event){
-                //i know i could have used a switch statement but i didnt
+                //could have used a switch statement
                 if(event.keyCode == 37){
                     document.getElementById('mySpan01').style.left =
                     parseInt(document.getElementById('mySpan01').style.left) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}   
@@ -71,7 +71,8 @@
     <body>
         <h1 align=center>T3A07-code-Jack</h1>
         you can use the arrow keys on your keyboard too<br><br>
-           <table border=0 width=50px height=50px>
+         //can probably shorten this somehow
+        <table border=0 width=50px height=50px>
             <tr><td></td><td><span class="arrow up" onclick="document.getElementById('mySpan01').style.top=parseInt(document.getElementById('mySpan01').style.top) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></b></td><td></td></tr>
             <tr><td><span class="arrow left" onclick=" document.getElementById('mySpan01').style.left=parseInt(document.getElementById('mySpan01').style.left) - 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></td>
             <td></td><td><span class="arrow right" onclick="document.getElementById('mySpan01').style.left=parseInt(document.getElementById('mySpan01').style.left) + 10; if (myHitOther('mySpan01','mySpan02')){document.getElementById('mySpan02').style.left = '-400px'}"></span></td></tr>
