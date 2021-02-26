@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Input/Output</title>
+        <link rel="stylesheet" href="styles/style1.css">
+    </head>
+    <body>
+        <h1 align=center>T3A10-inOut-jack</h1>
+        Store this input variable into <select size=1></select>:
+        <input id="myText01" type=text value=3 ><br><br>
+        
+        <input type=button value="run first" onclick="{
+            x = document.getElementById('myText01').value
+            //alert('x: '+ x)// 
+            document.getElementById('mySpan01').innerHTML = 'X is: '+ x
+        }"><br><br>
+
+        <span id="mySpan01" >...</span><br><br>
+    </body>
+</html>

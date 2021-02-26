@@ -1,5 +1,9 @@
-
-body {margin-left: 20%; margin-right: 20%; background-color: #313c4c; color: #51dbff; font-family: 'Open Sans', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body { 
+    background-color: #313c4c; 
+    color: #51dbff; 
+    font-family: 'Open Sans', sans-serif;
+}
 
 a:link {color: #0aa5da;}
 a:visited {color: #0aa5da;}
