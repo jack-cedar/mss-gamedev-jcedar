@@ -6,15 +6,32 @@
     <body>
         <h1 align=center>T3A10-inOut-jack</h1>
         <a href="https://jack-cedar.github.io/mss-gamedev-jcedar/public/index.html"style =>Back to my Index</a><br></br>
-        Store this input variable into <select size=1></select>:
+        Store this input variable into 
+        <select size= name="variables" id="vars">
+            <option value="X">X</option>
+            <option value="Y">Y</option>
+            <option value="Z">Z</option>
+        </select>
         <input id="myText01" type=text value=3 ><br><br>
-        
-        <input type=button value="run first" onclick="{
-            x = document.getElementById('myText01').value
-            //alert('x: '+ x)// 
-            document.getElementById('mySpan01').innerHTML = 'X is: '+ x
+        <input type="button" value="store" onclick="{
+            switch(vars.selectedIndex) {
+                case 0: x = document.getElementById('myText01').value;
+                document.getElementById('mySpan01').innerHTML = 'X = '+ x
+                break;
+                case 1: y = document.getElementById('myText01').value;
+                document.getElementById('mySpan02').innerHTML = 'Y = '+ y
+                break;
+                case 2: z = document.getElementById('myText01').value;
+                document.getElementById('mySpan03').innerHTML = 'Z = '+ z
+                break;
+            }
+        }"> <input type="button" value="reset" onclick="{
+            document.getElementById('mySpan01').innerHTML = 'X = N/A'
+            document.getElementById('mySpan02').innerHTML = 'Y = N/A'
+            document.getElementById('mySpan03').innerHTML = 'Z = N/A'
         }"><br><br>
-
-        <span id="mySpan01" >...</span><br><br>
+        <span id="mySpan01" >X = N/A</span><br><br>
+        <span id="mySpan02" >Y = N/A</span><br><br>
+        <span id="mySpan03" >Z = N/A</span><br><br>
     </body>
 </html>
