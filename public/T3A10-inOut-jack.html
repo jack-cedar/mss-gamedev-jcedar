@@ -12,7 +12,7 @@
             <option value="Y">Y</option>
             <option value="Z">Z</option>
         </select>
-        <input id="myText01" type=text value=3 ><br><br>
+        <input id="myText01" type=text><br><br>
         <input type="button" value="store" onclick="{
             switch(vars.selectedIndex) {
                 case 0: x = document.getElementById('myText01').value;
@@ -22,7 +22,7 @@
                 document.getElementById('mySpan02').innerHTML = 'Y = '+ y
                 break;
                 case 2: z = document.getElementById('myText01').value;
-                document.getElementById('mySpan03').innerHTML = 'Z = '+ z
+                document.getElementById('mySpan03').innerHTML = 'Z = '+ x
                 break;
             }
         }"> <input type="button" value="reset" onclick="{
