@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title></title>
+        <title>Decisions</title>
         <link rel="stylesheet" href="styles/style1.css">
     </head>
     <body>
@@ -11,6 +11,14 @@
             && means AND
             ! means NOT 
         </pre>
+        <input id="myText01" type="text" value=3><br><br>
+        <input type="button" value="show X" onclick="{
+            x = document.getElementById('myText01').value
+            myTemp = '...............'
+            if (x >= 2){myTemp = 'Somthing'}
+            document.getElementById('mySpan01').innerHTML = myTemp
+        }"><br><br>
+        <span id="mySpan01">...</span>
         
     </body>
 </html>
