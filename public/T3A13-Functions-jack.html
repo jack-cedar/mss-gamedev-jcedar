@@ -1,11 +1,14 @@
 <html>
     <head>
         <title></title>
+        <style>
+            .square {
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                }
+            </style>
         <script>
-            
-            function myBasicFun(){
-                document.getElementById('mySpan01').innerHTML = "wow";
-            }
             function multiply(x, y){
                 return x= x*y;
             }
@@ -18,17 +21,28 @@
             function subtract(x, y){
                 return x= x-y;
             }
+            function average(x, y){
+                return x= (parseInt(x) + parseInt(y))/2
+            }
+            function makeSquare(x, y){
+                document.getElementById("square01").style.backround-color="blue";
+                //document.getElementById("square01").style.width="x";
+               // document.getElementById("square01").style.height="y";
+            }
         </script>
+        <style>
+        .square {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            }
+        </style>
     </head>
     <body>
         <h1>T3A13-Functions-jack</h1>
-        <h3>Version number: 2.1.1</h3>
+        <h3>Version number: 1.2.0</h3>
         <a href="https://jack-cedar.github.io/mss-gamedev-jcedar/public/index.html"style =>Back to my Index</a><br></br>
-        <input id="myText01" type="text" value=3><br><br>
-        <input type="button" value="Run function" onclick="{
-        myBasicFun()
-        console.log('button works')
-        }"><br><br>
+        <br><br>
         <input id="num1"type="text" value=6> <input id="num2"type="text"value=3> <br><br>
         <input type="button" value="Multiply" onclick="{
             var num1 = document.getElementById('num1').value;
@@ -53,7 +67,18 @@
             var num2 = document.getElementById('num2').value;
             document.getElementById('mySpan01').innerHTML =
             subtract(num1,num2);
+        }"><input type="button" value="Average" onclick="{
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            document.getElementById('mySpan01').innerHTML =
+            average(num1,num2);
         }"><br><br>
         <span id="mySpan01">...</span><br><br>
+        <div id="square01"class="square"></div>
+        <input type="button" value="Make Square" onclick="{
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            makeSquare(num1,num2);
+        }">
     </body>
 </html>
