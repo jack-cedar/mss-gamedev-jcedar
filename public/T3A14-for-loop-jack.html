@@ -15,11 +15,17 @@
         <input type="button" value="show X" onclick="{
             x = document.getElementById('myText01').value
             let myTemp ='';
-            for(let i=0; i<x; i++){
-                myTemp += 'Loop Number: ' + i + '<br>';
+            for(let i=1; i<x; i++){
+                if (i = 1 ){
+                    myTemp += 'Loop Number: 1 ' <br>''  ;
+                }
+                else{
+                    myTemp += 'Loop Number: ' + i + '<br>';
+                }
+                
             }
             document.getElementById('mySpan01').innerHTML = myTemp
-        }">
+        }"><br><br>
         <span id="mySpan01">...</span><br><br>
     </body>
 </html>
