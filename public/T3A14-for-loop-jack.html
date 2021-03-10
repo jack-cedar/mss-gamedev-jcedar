@@ -14,10 +14,11 @@
         <input type="button" value="show X" onclick="{
             var x =  document.getElementById('myText01').value;
             let myTemp='';
+            
             for(let i=0; i<x; i++){
                 myTemp += 'Loop Number: '+ i + '<br>';
-                if(i => 5 &&  i <= 10){
-                    document.getElementById('mySpan01').style.color=
+                if( i >= 4){
+                    document.getElementById('mySpan01').style.color= 'blue';
                 }
             }
             document.getElementById('mySpan01').innerHTML = myTemp
