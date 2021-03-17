@@ -10,15 +10,18 @@
         <h3>Version number: 0.0.1</h3>
         <a href="https://jack-cedar.github.io/mss-gamedev-jcedar/public/index.html"style =>Back to my Index</a><br></br>
         Store this input into x:
-        <input id="myText01"type="text" type=text value=3><br><br>
+        <input id="myText01"type="text" type=text value=15><br><br>
         <input type="button" value="show X" onclick="{
             var x =  document.getElementById('myText01').value;
             let myTemp='';
-            
-            for(let i=0; i<x; i++){
+          
+            for(let i=1; i<=x; i++){
                 myTemp += 'Loop Number: '+ i + '<br>';
-                if( i >= 4){
-                    document.getElementById('mySpan01').style.color= 'blue';
+                if(i >= 4){
+                    myTemp +='<font style=color:blue>'
+                        if(i >= 10){
+                            myTemp +='<font style=color:black>'
+                        }
                 }
             }
             document.getElementById('mySpan01').innerHTML = myTemp
