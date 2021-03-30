@@ -11,7 +11,7 @@ function generate(){
         for (var y = 0; y < height/tileSize*tileSize; y+=tileSize){                    
             let v = Math.random()
             c.globalAlpha = v;
-        c.fillRect(x , y, tileSize, tileSize);
+            c.fillRect(x , y, tileSize, tileSize);
         }
     }
 }
