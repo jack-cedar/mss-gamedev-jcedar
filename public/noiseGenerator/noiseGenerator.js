@@ -7,6 +7,7 @@ function clearCanvas(){c.clearRect(0,0,width,height);}
 function generate(){
     var tiles =document.getElementById("size").value;
     var tileSize = parseFloat(tiles);
+    c.clearRect(0,0,width,height);
     for (var x = 0; x < width/tileSize*tileSize; x+=tileSize){
         for (var y = 0; y < height/tileSize*tileSize; y+=tileSize){                    
             let v = Math.random()
