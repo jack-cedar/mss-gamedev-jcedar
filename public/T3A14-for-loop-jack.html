@@ -4,7 +4,7 @@
         <script>
 
         </script>
-        
+         <link rel="stylesheet" href="styles/style1.css">
     </head>
     <body>
         <h1 align-center>T3A14-for-loop-jack</h1>
@@ -19,13 +19,13 @@
             var y =  document.getElementById('myText02').value;
             var z =  document.getElementById('myText03').value;
             let myTemp='';
-          
+            myTemp +='<font style=color:red>'
             for(let i=1; i<=x; i++){
                 
                 if(i >= y){
                     myTemp +='<font style=color:cyan>'
                         if(i > z){
-                            myTemp +='<font style=color:black>'
+                            myTemp +='<font style=color:red>'
                         }
                 }
                 myTemp += 'Loop Number: '+ i + '<br>';
