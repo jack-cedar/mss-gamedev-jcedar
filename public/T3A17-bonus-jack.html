@@ -1,4 +1,4 @@
-Version 0.0.1
+Version 1.0.1
 
 <h1 align=center>T3A17-bonus-class-jack</h1>
 
@@ -6,7 +6,7 @@ Enter an age into the class: <input id="myText01" type=text value=17 ><br>
 Enter a name into the class: <input id="myText02" type=text value=fluffy ><br>
 Enter a pet type into the class: <input id="myText03"type="text" value="cat"><br>
 enter pet colour into the class: <input id="myText04"type="text" value="black"><br><br>
-<input id="myButton131" type="button" value="Make a class myAnimal and run the method myShow()" onclick="{
+<input id="myButton01" type="button" value="Make a class myAnimal and run the method myShow()" onclick="{
 var age = getElementById('myText01').value
 var name = getElementById('myText02').value
 var type = getElementById('myText03').value
@@ -21,7 +21,7 @@ class myAnimal {
        this.myColour = passColour;
     }
     myShow(){
-       document.getElementById('myDiv131').innerHTML = 'This is '+ this.myName+ ', '+ this.myName+ ' is a ' + this.myAge+ ' year old ' +this.myColour+' '+this.myType;
+       document.getElementById('myDiv01').innerHTML = 'This is '+ this.myName+ ', '+ this.myName+ ' is a ' + this.myAge+ ' year old ' +this.myColour+' '+this.myType;
     }
  }  // end class myAnimal
                                                              
@@ -30,4 +30,4 @@ class myAnimal {
    myPet.myShow()                                                                           
 }"><br><br>
 
-<div id='myDiv131'>...</div><br>
+<div id='myDiv01'>...</div><br>
