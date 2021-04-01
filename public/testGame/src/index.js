@@ -1,4 +1,4 @@
-import player from './player'
+import player from './player.js'
 let canvas = document.getElementById("gameDisplay")
 let ctx = canvas.getContext("2d");
 const gameWidth = 800;

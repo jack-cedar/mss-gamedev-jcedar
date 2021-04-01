@@ -1,4 +1,4 @@
-export default class player {
+export class player {
     constructor(gameWidth, gameHeight){
         this.width=50;
         this.height=100;
