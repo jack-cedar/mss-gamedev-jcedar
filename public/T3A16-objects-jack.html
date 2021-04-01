@@ -1,0 +1,14 @@
+<script>
+    function objectShow(){
+        let myObject = {
+            "firstName": document.getElementById("myText01").value,
+            "age": document.getElementById("myText02").value
+        }
+        document.getElementById("mySpan01").innerHTML = "myObject.firstName: "+ myObject.firstName +"<br> myObject.age: "+ myObject.age;
+    }
+</script>
+<h1 align=center>T3A16-objects-jack</h1>
+Enter an age into the object: <input id="myText01" type="text" value="17"><br><br>
+enter a name into the object: <input id="myText02" type="text" value="john"><br><br>
+<input type="button" value="Make and Show Object" onclick="{objectShow()}"><br><br>
+<span id="mySpan01"></span>
