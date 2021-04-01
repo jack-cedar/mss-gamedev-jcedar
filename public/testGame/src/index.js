@@ -6,5 +6,5 @@ const gameHeight = 600;
 
 
 ctx.clearRect(0, 0, 800, 600);
-let player = new player(gameWidth, gameHeight);
+player = new player(gameWidth, gameHeight);
 player.draw(ctx);
