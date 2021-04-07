@@ -4,8 +4,8 @@
         this.height = 100;
 
         this.position = {
-            x: displayWidth / 2 - this.width / 2,
-            y: displayHeight / 2 - this.height / 2,
+            x: 20,
+            y: 20,
         }
     }
     draw(ctx){
