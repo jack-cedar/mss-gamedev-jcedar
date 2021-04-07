@@ -3,8 +3,8 @@ let ctx = canvas.getContext('2d');
 var playerX = 20;
 var playerY = 20;
 function update(dTime){
-    if (!d) return;
-    playerX += 5 / d
+    if (!dTime) return;
+    playerX += 5 / dTime
 }
 function draw(){
     player01 = ctx.fillRect(playerX,playerY,100,100)
