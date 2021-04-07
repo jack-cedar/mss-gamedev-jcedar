@@ -1,4 +1,4 @@
-import entity from 'src/entityConstructor.js';
+import entity from './entityConstructor';
 let canvas = document.getElementById("display");
 let ctx = canvas.getContext('2d');
 const  DISPLAY_WIDTH = 800;
