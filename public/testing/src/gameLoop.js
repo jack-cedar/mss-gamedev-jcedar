@@ -15,7 +15,7 @@ function gameLoop(cTime) {
     let dTime = cTime - pTime;
     pTime = cTime;
     ctx.clearRect(0,0,800,600);
-    update(d);
+    update(dTime);
     draw();
     requestAnimationFrame(gameLoop); 
 }
