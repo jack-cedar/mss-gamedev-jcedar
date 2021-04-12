@@ -1,29 +1,77 @@
+<html>
+	<head>
+		<title>Forms</title>
+		<script>	
+			function showPass(){
+				var i = document.getElementById("pass");
+				if(i.type === "password") {
+					i.type = "text";
+				}else{
+					i.type = "password";
+				}
+			}
+			function newUser(){
+				var gender;
+				var male = document.getElementById("male");
+				var female = document.getElementById("female");
+				var other = document.getElementById("other");
+				if(male.checked ==true){
+					gender = "male";
+				}else if (female.checked ==true){
+					gender = "female";
+				}
+				else if (other.checked ==true){
+					gender = "other";
+				}
+				var user = {
+				name: document.getElementById("myText01").value,
+				age: document.getElementById("mynum01").value,
+				password: document.getElementById("pass").value,
+				gender: gender,	
+			}
+			document.getElementById("mySpan01").innerHTML = 'Username: ' + user.name;
+			document.getElementById("mySpan02").innerHTML = 'Age: ' + user.age
+			document.getElementById("mySpan03").innerHTML = 'Password: ' + user.password;
+			document.getElementById("mySpan04").innerHTML = 'Gender: ' + user.gender;
+			console.log
+			}
+		</script>
+		<link rel="stylesheet" href="styles/style1.css">
+	</head>
+	<body>
+		<h1 align=center>T3A05-forms-Jack</h1>
+		<a href="https://jack-cedar.github.io/mss-gamedev-jcedar/public/index.html"style =>Back to my Index</a><br></br>
+		
+		<form>
+			Username: <input id="myText01" type="text" value=""><br>
+			Age: <input id="mynum01" type=number><br>
+			Password: <input id="pass"type="password"><br>
+			Show Password: <input type="checkbox" onclick="showPass()"><br>
+			Male: <input id="male" type="radio" name="gender" value="male"><br>
+			Female: <input id="female" type="radio" name="gender" value="female"><br>
+			Other: <input id="other" type="radio" name="gender" value="other"><br>
+			Reset: <input type="reset"><br>
+		</form>
+		<b>Creates an Object with the information given above:</b> <br>
+			Submit:<input type="submit" name="submitButton" onclick="newUser()" value="Submit"><br><br>
+			<span id="mySpan01">Username: ....</span><br>
+			<span id="mySpan02">Age: .... </span><br>
+			<span id="mySpan03">Password: ....</span><br>
+			<span id="mySpan04">Gender: ....</span><br><br><br>
+		
+		Fancy<br>
+		<select size=1>
+			<option value="apple">Fruit
+			<option value="steak">Meat
+		</select>
+		<textarea id="myArea01" rows=4 cols=20>
+		BLah, Blah, Blah
+		</textarea>
+		<br><br>
 
-<link rel="stylesheet" href="styles/style1.css">
-<h1 align=center>T3A05-forms-Jack</h1>
-<a href="https://jack-cedar.github.io/mss-gamedev-jcedar/public/index.html"style =>Back to my Index</a><br></br>
-we will show lots of different form entries for web pages<br>
-
-
-Text: <input id ="myText01>" type text value=Jack><br>
-Number: <input id="mynum01" type=number value=5><br>
-Password: <input type="password"><br>
-Checkbox: <input type="checkbox"><br>
-Radio: <input type="radio"><br>
-Reset: <input type="reset">
-Submit:<input type="submit"><br>
-
-Fancy<br>
-<select size=1>
-	<option value="apple">Fruit
-	<option value="steak">Meat
-</select>
-<textarea id="myArea01" rows=4 cols=20>
-BLah, Blah, Blah
-</textarea>
-<br><br>
-
-Button<br>
-<input type=button value="click for alert" onClick="{
-   alert('Hello Javascript World')                                                    
-}"> 
+		Button<br>
+		<input type=button value="click for alert" onClick="{
+		alert('Hello Javascript World')                                                    
+		}"> 
+	</body>
+</html>
