@@ -1,8 +1,5 @@
-
+import {player} from './player.js'
+import {enemy} from './enemy.js'
 let rat = new enemy(10, 2)
-let player = {
-    hp: 100,
-    lvl: 1,
-    xp: 0,
-    dmg: 5,
-}
+let player01 = new player()
+player01.attack(rat)
