@@ -13,7 +13,7 @@ export class player {
     levelUp(){
     }
     update(){
-        if(this.xp == this.xpToLvlup){
+        if(this.xp >= this.xpToLvlup){
             this.levelUp()
         }
     }
