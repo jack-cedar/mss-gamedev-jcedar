@@ -6,8 +6,8 @@ export class player {
         this.xp = 0;
         this.xpToLvlup = 100;
     }
-    attack(enemy){
-        enemy.hp - this.power;
+    attack(target){
+        target.hp - this.power;
     }
     levelUp(){
     }
