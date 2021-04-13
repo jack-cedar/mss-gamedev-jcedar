@@ -8,6 +8,7 @@ export class player {
     }
     attack(target){
         target.hp - this.power;
+        console.log(target.hp)
     }
     levelUp(){
     }
