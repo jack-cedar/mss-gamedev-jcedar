@@ -1,4 +1,4 @@
-class enemy{
+export class enemy{
     constructor(health, damage){
         this.hp = health;
         this.dmg = damage;
