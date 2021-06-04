@@ -81,21 +81,6 @@ function drawCursor(){
     ctx.fill()
     ctx.stroke(); 
 }
-function drawBullet(){
-    ctx.strokeStyle = 'red';
-    ctx.fillStyle = 'red';
-    ctx.beginPath();
-    ctx.moveTo(squareCenterX, squareCenterY);
-    ctx.lineTo(mouseX, mouseY);
-    ctx.lineWidth = 5;
-    ctx.fill();
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(mouseX, mouseY, 3, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.stroke();
-    bulletFired = false;
-}
 function drawEnemy(){
     ctx.fillStyle = 'green';
     ctx.beginPath();
@@ -140,10 +125,13 @@ const bullet = function(x, y, xVel, yVel){
             default:y = y += (yVel/100);break; 
         }
     ctx.fillStyle = 'black';
+    
         ctx.beginPath();
         ctx.arc(x, y, 50, 0, 2 * Math.PI);
         ctx.fill()
         ctx.stroke()
+        
+        
     }
 }
 function shootBullet(){
