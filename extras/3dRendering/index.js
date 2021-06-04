@@ -3,7 +3,6 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = document.getElementById("myCanvas").width;
 let canvasHeight = document.getElementById("myCanvas").height;
 ctx.translate(canvasWidth/2, canvasHeight/2);
-
 const point = function(x, y){
   newPoint = [x, y]
   return(newPoint) 
@@ -24,9 +23,7 @@ ctx.lineTo(points[0][0], points[0][1])
 ctx.stroke();
 ctx.closePath();
 }
-
 function gameLoop(){
-    
     draw();
     requestAnimationFrame(gameLoop);    
 }
