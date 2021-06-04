@@ -20,6 +20,7 @@ let enemyX = Math.floor(Math.random() * canvasWidth)
 let enemyY = Math.floor(Math.random() * canvasHeight)
 let enemyRadius = 25;
 let playerPts = 0;
+
 document.addEventListener("keydown", keyPressed)
 document.addEventListener("keyup", keyReleased)
 canvas.addEventListener("click", clicked)
@@ -55,7 +56,7 @@ function gameLoop(){
     playerUpdate();
     drawEnemy();
     switch(bulletFired){
-        case true: drawBullet();break;
+        case true: shootBullet();break;
         default: break;
     }
     drawPlayer();
@@ -96,7 +97,6 @@ function drawBullet(){
     bulletFired = false;
 }
 function drawEnemy(){
-    console.log("test")
     ctx.fillStyle = 'green';
     ctx.beginPath();
     ctx.arc(enemyX, enemyY, enemyRadius, 0, 2 * Math.PI);
@@ -128,7 +128,29 @@ function drawHUD(){
     ctx.font = "30px Arial";
     ctx.fillText("Points: "+ playerPts, 10, 30);
 }
-
+const bullet = function(x, y, xVel, yVel){
+    
+    for(i = 0; i < 100; i++){
+        switch(x < 0){
+            case true: x = x -= (xVel/100);break;
+            default:x = x += (xVel/100);break;
+        }
+        switch(y < 0){
+            case true: y = y -= (yVel/100);break;
+            default:y = y += (yVel/100);break; 
+        }
+    ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(x, y, 50, 0, 2 * Math.PI);
+        ctx.fill()
+        ctx.stroke()
+    }
+}
+function shootBullet(){
+    new bullet(squareCenterX, squareCenterY, mouseX, mouseY);    
+    bulletFired = false;
+   
+}
 
 
 
