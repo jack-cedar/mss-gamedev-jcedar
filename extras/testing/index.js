@@ -51,14 +51,15 @@ function gameLoop(){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     squareCenterX = (squareX+(squareW/2));
     squareCenterY = (squareY+(squareH/2));
-    drawLineto();
+    //drawLineto();
+    switch(bulletFired){
+        case true:new bullet(squareCenterX, squareCenterY, mouseX, mouseY); bulletFired = false ;break;
+        default: break;
+    }
     drawCursor();
     playerUpdate();
     drawEnemy();
-    switch(bulletFired){
-        case true: shootBullet();break;
-        default: break;
-    }
+    
     drawPlayer();
     drawHUD();
     requestAnimationFrame(gameLoop);    
@@ -115,29 +116,31 @@ function drawHUD(){
 }
 const bullet = function(x, y, xVel, yVel){
     
-    for(i = 0; i < 100; i++){
-        switch(x < 0){
-            case true: x = x -= (xVel/100);break;
-            default:x = x += (xVel/100);break;
-        }
-        switch(y < 0){
-            case true: y = y -= (yVel/100);break;
-            default:y = y += (yVel/100);break; 
-        }
-    ctx.fillStyle = 'black';
-    
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+    for(i = 0; i < 1000; i++){
+        x = x-=((x-xVel)/100)
+        y = y-=((y-yVel)/100)
+    ctx.fillStyle = 'red';
         ctx.beginPath();
-        ctx.arc(x, y, 50, 0, 2 * Math.PI);
+        ctx.arc(x, y, 5, 0, 2 * Math.PI);
         ctx.fill()
-        ctx.stroke()
+      
+        
+        x = x-=((x-xVel)/3)
+        y = y-=((y-yVel)/3)
+
+
+       
+        let distance = Math.sqrt(((x-enemyX)*(x-enemyX))+((y-enemyY)*(y-enemyY)))
+        if (distance < enemyRadius){
+        enemyX = Math.floor(Math.random() * canvasWidth);
+        enemyY = Math.floor(Math.random() * canvasHeight);
+        playerPts ++;
+        requestAnimationFrame(bullet)
+    }
         
         
     }
-}
-function shootBullet(){
-    new bullet(squareCenterX, squareCenterY, mouseX, mouseY);    
-    bulletFired = false;
-   
 }
 
 
