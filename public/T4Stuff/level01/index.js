@@ -61,7 +61,7 @@ function gameLoop(){
     drawEnemy();
     if(playerPts == 20){
         alert("you Win")
-        location.href = "https://jack-cedar.github.io/mss-gamedev-jcedar/T4Stuff/index.html";
+        location.href = "https://jack-cedar.github.io/mss-gamedev-jcedar/public/T4Stuff/index.html";
     }
     
     drawPlayer();
