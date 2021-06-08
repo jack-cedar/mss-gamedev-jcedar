@@ -1,10 +1,7 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext('2d');
-
-
 let width = document.getElementById("myCanvas").width;
 let height = document.getElementById("myCanvas").height;
-
 ctx.translate(width/2, height/2);
 
 var grd = ctx.createLinearGradient(0, 200, 200, 0);
@@ -23,7 +20,6 @@ var points = [
   new point( 100, 100),
   new point(-100, 100),
 ]
-
 function draw() {
   ctx.strokeStyle = "white";
   ctx.fillStyle = grd;
@@ -35,31 +31,8 @@ function draw() {
 ctx.fill();
 ctx.closePath();
 }
-
 function gameLoop(){
     draw();
     requestAnimationFrame(gameLoop);    
 }
 gameLoop();
-
-   
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
