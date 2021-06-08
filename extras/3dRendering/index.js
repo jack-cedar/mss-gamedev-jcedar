@@ -3,26 +3,36 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = document.getElementById("myCanvas").width;
 let canvasHeight = document.getElementById("myCanvas").height;
 ctx.translate(canvasWidth/2, canvasHeight/2);
+
+var grd = ctx.createLinearGradient(0, 200, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "blue");
+
 const point = function(x, y){
-  newPoint = [x, y]
+  newPoint = {
+    x: x,
+    y: y,
+  }
   return(newPoint) 
 };
 var points = [
-  new point( 0, -50),
-  new point( 50, 50),
-  new point(-50, 50),
+  new point( 0, -75),
+  new point( 100, 100),
+  new point(-100, 100),
 ]
+
 function draw() {
   ctx.strokeStyle = "white";
+  ctx.fillStyle = grd;
   ctx.beginPath();
-  ctx.moveTo(points[0][0], points[0][1])
+  ctx.moveTo(points[0].x, points[0].y)
   for(i = 0; i < points.length; i++){
-  ctx.lineTo(points[i][0], points[i][1])
+  ctx.lineTo(points[i].x, points[i].y)
 }
-ctx.lineTo(points[0][0], points[0][1])
-ctx.stroke();
+ctx.fill();
 ctx.closePath();
 }
+
 function gameLoop(){
     draw();
     requestAnimationFrame(gameLoop);    
