@@ -1,8 +1,11 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext('2d');
-let canvasWidth = document.getElementById("myCanvas").width;
-let canvasHeight = document.getElementById("myCanvas").height;
-ctx.translate(canvasWidth/2, canvasHeight/2);
+
+
+let width = document.getElementById("myCanvas").width;
+let height = document.getElementById("myCanvas").height;
+
+ctx.translate(width/2, height/2);
 
 var grd = ctx.createLinearGradient(0, 200, 200, 0);
 grd.addColorStop(0, "red");
